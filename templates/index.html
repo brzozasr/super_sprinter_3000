@@ -1,0 +1,34 @@
+{% extends 'pattern.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+    <h2>Super Sprinter 3000</h2>
+    <p><a href="/story">Add new User Story</a></p>
+    {% if user_stories|length > 0 %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Story Title</th>
+            <th>User Story</th>
+            <th>Acceptance Criteria</th>
+            <th>Business Value</th>
+            <th>Estimation</th>
+            <th>Status</th>
+        </tr>
+        {% for story in user_stories %}
+        <tr>
+            <td>{{ story['id'] }}</td>
+            <td><a href="/story/{{ story['id'] }}">{{ story['title'] }}</a></td>
+            <td>{{ story['user_story']|safe }}</td>
+            <td>{{ story['acceptance_criteria']|safe }}</td>
+            <td>{{ story['business_value'] }}</td>
+            <td>{{ story['estimation'] }}</td>
+            <td>{{ story['status'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>There are no stories to display.</p>
+    {% endif %}
+{% endblock %}

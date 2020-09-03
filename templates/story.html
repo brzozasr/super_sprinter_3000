@@ -1,0 +1,29 @@
+{% extends 'pattern.html' %}
+
+{% block title %}{% if id_story is none %}Add User Story{% else %}Edit User Story{% endif %}{% endblock %}
+
+{% block content %}
+    {% if id_story is none %}
+        <h2>Add User Story</h2>
+    {% else %}
+        <h2>Edit User Story</h2>
+    {% endif %}
+    <form action="#" method="post">
+        <label for="title">Story Title:</label><br>
+        <input type="text" id="title" name="title" minlength="5" required><br>
+        <br>
+        <label for="story">User Story:</label><br>
+        <textarea id="story" name="story" rows="4" cols="50" required></textarea><br>
+        <br>
+        <label for="criteria">Acceptance Criteria:</label><br>
+        <textarea id="criteria" name="criteria" rows="6" cols="50" required></textarea><br>
+        <br>
+        <label for="business_value">Business value:</label><br>
+        <input type="number" id="business_value" name="business_value" min="100" max="1500" step="100" value="100" required><br>
+        <br>
+        <label for="estimation">Estimation:</label><br>
+        <input type="number" id="estimation" name="estimation" min="0.5" max="40" step="0.5" value="0.5" required><br>
+        <br>
+        <input type="submit" value="Add new User Story" name="sub_button">
+    </form>
+{% endblock %}

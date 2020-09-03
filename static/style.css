@@ -1,0 +1,7 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+}
