@@ -2,9 +2,120 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-table, tr, td, th {
-    border: 1px solid black;
-    border-collapse: collapse;
+#content {
+  width: 99%;
+  margin: auto;
+  /*border: 3px solid #73AD21;*/
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 3px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #0080ff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+form.center {
+  max-width: 500px;
+  margin: auto;
+  background: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #0080ff;
+}
+
+label {
+  color: #0146f3;
+}
+
+input[type=text] {
+  width: 100%;
+  color: #000099;
+  padding: 8px 12px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 1px solid #0080ff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  width: 100%;
+  color: #000099;
+  padding: 4px 6px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 1px solid #0080ff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #0040ff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  color: #000099;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 120px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid #0080ff;
+  border-radius: 4px;
+  background-color: white;
+  resize: none;
+}
+
+select {
+  width: 100%;
+  color: #0146f3;
+  padding: 4px 6px;
+  border: 1px solid #0080ff;
+  border-radius: 4px;
+  background-color: white;
+}
+
+h2.title {
+  color: #0146f3;
+  margin: auto;
+  text-align: center;
+}
+
+.txt_center {
+  text-align: center;
+}
+
+.txt_left {
+  text-align: left;
+}
+
+.txt_right {
+  text-align: right;
 }
 
 a:link.btn_red, a:visited.btn_red {
@@ -34,7 +145,7 @@ a:hover.btn_blue, a:active.btn_blue {
 }
 
 a:link.btn_green, a:visited.btn_green {
-  background-color: #33cb1e;
+  background-color: #20bd0a;
   color: white;
   padding: 4px 5px;
   text-align: center;
@@ -43,5 +154,5 @@ a:link.btn_green, a:visited.btn_green {
 }
 
 a:hover.btn_green, a:active.btn_green {
-    background-color: #20bd0a;
+    background-color: #009933;
 }

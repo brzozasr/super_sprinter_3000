@@ -3,10 +3,10 @@
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
-    <h2>Super Sprinter 3000</h2>
+    <h2 class="title">Super Sprinter 3000</h2>
     <p><a class="btn_green" href="/story">Add new User Story</a></p>
     {% if user_stories|length > 0 %}
-        <table>
+        <table class="center">
             <tr>
                 <th>ID</th>
                 <th>Story Title</th>
@@ -19,14 +19,14 @@
             {% for story in user_stories %}
                 <tr>
                     <td>{{ story['id'] }}.</td>
-                    <td>{{ story['title'] }}<br>
+                    <td class="txt_left">{{ story['title'] }}<br>
                         <a class="btn_blue" href="/story/{{ story['id'] }}">Update</a>
                         <a class="btn_red" href="/delete/{{ story['id'] }}"
                            onclick="return confirm('Do you want to delete User Story with ID: {{ story['id'] }}?');">Delete</a>
                     </td>
-                    <td>{{ story['user_story']|safe }}</td>
-                    <td>{{ story['acceptance_criteria']|safe }}</td>
-                    <td>{{ story['business_value'] }}</td>
+                    <td class="txt_left">{{ story['user_story']|safe }}</td>
+                    <td class="txt_left">{{ story['acceptance_criteria']|safe }}</td>
+                    <td class="txt_center">{{ story['business_value'] }}</td>
                     <td>{{ story['estimation'] }}</td>
                     <td>{{ story['status'] }}</td>
                 </tr>

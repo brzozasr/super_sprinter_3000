@@ -1,16 +1,12 @@
 {% extends 'pattern.html' %}
 
 {% block title %}{% if id_story is none %}Add User Story{% else %}Update User Story{% endif %}{% endblock %}
-
-{% block content %}
-    {% if id_story is none %}
-        <h2>Add User Story</h2>
+{% if id_story is none %}
         {% set btn_value = 'Add new User Story' %}
         {% set business_value = 100 %}
         {% set estimation = 0.5 %}
         {% set story_url = '/add' %}
     {% else %}
-        <h2>Update User Story</h2>
         {% set btn_value = 'Update User Story' %}
         {% set story_title = data_update['title'] %}
         {% set user_story = data_update['user_story'] %}
@@ -20,7 +16,9 @@
         {% set sts = data_update['status'] %}
         {% set story_url = '/update/' + id_story|string %}
     {% endif %}
-    <form action="{{ story_url }}" method="post">
+{% block content %}
+    {% if id_story is none %}<h2 class="title">Add User Story</h2>{% else %}<h2 class="title">Update User Story</h2>{% endif %}
+    <form action="{{ story_url }}" method="post" class="center">
         <label for="title">Story Title:</label><br>
         <input type="text" id="title" name="title" minlength="5" value="{{ story_title }}" placeholder="Write story title" required><br>
         <br>
@@ -28,7 +26,7 @@
         <textarea id="story" name="story" rows="4" cols="50" placeholder="Write user story" required>{{ user_story }}</textarea><br>
         <br>
         <label for="criteria">Acceptance Criteria:</label><br>
-        <textarea id="criteria" name="criteria" rows="6" cols="50" placeholder="Write acceptance ariteria" required>{{ acceptance_criteria }}</textarea><br>
+        <textarea id="criteria" name="criteria" rows="6" cols="50" placeholder="Write acceptance criteria" required>{{ acceptance_criteria }}</textarea><br>
         <br>
         <label for="business_value">Business value:</label><br>
         <input type="number" id="business_value" name="business_value" min="100" max="1500" step="100" value="{{ business_value }}" required><br>
