@@ -48,18 +48,6 @@
             {% endfor %}
         </select><br>
         <br>
-{#        {% else %}#}
-{#            <select name="status" id="status" hidden>#}
-{#            {% set count = namespace(value=0) %}#}
-{#            {% for status in statusies %}#}
-{#                {% if count.value == 0 %}#}
-{#                <option value="{{ status }}" selected>{{ status }}</option>#}
-{#                {% else %}#}
-{#                <option value="{{ status }}">{{ status }}</option>#}
-{#                {% endif %}#}
-{#                {% set count.value = count.value + 1 %}#}
-{#            {% endfor %}#}
-{#            </select>#}
         {% endif %}
         <input type="submit" value="{{ btn_value }}" name="sub_button">
     </form>
