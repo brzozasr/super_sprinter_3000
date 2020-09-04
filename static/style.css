@@ -4,4 +4,44 @@ body {
 
 table, tr, td, th {
     border: 1px solid black;
+    border-collapse: collapse;
+}
+
+a:link.btn_red, a:visited.btn_red {
+  background-color: #f44336;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover.btn_red, a:active.btn_red {
+  background-color: red;
+}
+
+a:link.btn_blue, a:visited.btn_blue {
+  background-color: #0146f3;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover.btn_blue, a:active.btn_blue {
+  background-color: #0000ff;
+}
+
+a:link.btn_green, a:visited.btn_green {
+  background-color: #33cb1e;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover.btn_green, a:active.btn_green {
+    background-color: #20bd0a;
 }
