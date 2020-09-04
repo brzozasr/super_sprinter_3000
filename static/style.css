@@ -67,7 +67,7 @@ input[type=number] {
   box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
   background-color: #0040ff;
   border: none;
   color: white;
