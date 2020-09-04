@@ -17,7 +17,6 @@ def index():
 def story(id_story=None):
     if id_story is not None:
         data_to_update = data_handler.get_by_id_user_story(id_story)
-        print(data_to_update, "TEST")
     else:
         data_to_update = None
     return render_template('story.html', id_story=id_story, statusies=data_handler.STATUSES,
