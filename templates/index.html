@@ -27,8 +27,8 @@
                         <a class="btn_red" href="/delete/{{ story['id'] }}"
                            onclick="return confirm('Do you want to delete User Story with ID: {{ story['id'] }}?');">Delete</a>
                     </td>
-                    <td class="txt_left">{{ story['user_story']|safe }}</td>
-                    <td class="txt_left">{{ story['acceptance_criteria']|safe }}</td>
+                    <td class="txt_left">{{ story['user_story'] }}</td>
+                    <td class="txt_left">{{ story['acceptance_criteria'] }}</td>
                     <td class="txt_center">{{ story['business_value'] }} point</td>
                     <td>{{ story['estimation'] }}h</td>
                     <td>{{ story['status'] }}</td>
