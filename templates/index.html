@@ -22,7 +22,7 @@
             {% for story in user_stories %}
                 <tr>
                     <td>{{ story['id'] }}.</td>
-                    <td class="txt_left">{{ story['title'] }}<br>
+                    <td class="txt_left" style="min-width: 150px">{{ story['title'] }}<br>
                         <a class="btn_blue" href="/story/{{ story['id'] }}">Update</a>
                         <a class="btn_red" href="/delete/{{ story['id'] }}"
                            onclick="return confirm('Do you want to delete User Story with ID: {{ story['id'] }}?');">Delete</a>
