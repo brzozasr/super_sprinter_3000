@@ -7,15 +7,18 @@
     <p><a class="btn_green" href="/story">Add new User Story</a></p>
     {% if user_stories|length > 0 %}
         <table class="center">
-            <tr>
-                <th>ID</th>
-                <th>Story Title</th>
-                <th>User Story</th>
-                <th>Acceptance Criteria</th>
-                <th>Business Value</th>
-                <th>Estimation</th>
-                <th>Status</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Story Title</th>
+                    <th>User Story</th>
+                    <th>Acceptance Criteria</th>
+                    <th>Business Value</th>
+                    <th>Estimation</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
             {% for story in user_stories %}
                 <tr>
                     <td>{{ story['id'] }}.</td>
@@ -26,11 +29,12 @@
                     </td>
                     <td class="txt_left">{{ story['user_story']|safe }}</td>
                     <td class="txt_left">{{ story['acceptance_criteria']|safe }}</td>
-                    <td class="txt_center">{{ story['business_value'] }}</td>
-                    <td>{{ story['estimation'] }}</td>
+                    <td class="txt_center">{{ story['business_value'] }} point</td>
+                    <td>{{ story['estimation'] }}h</td>
                     <td>{{ story['status'] }}</td>
                 </tr>
             {% endfor %}
+            </tbody>
         </table>
     {% else %}
         <p>There are no stories to display.</p>
